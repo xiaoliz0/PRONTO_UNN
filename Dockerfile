@@ -18,4 +18,3 @@ RUN apt-get update \
 COPY Config /pronto_unn/Config
 COPY In /pronto_unn/In
 COPY Script /pronto_unn/Script
-COPY pronto /pronto_unn/Script/pronto
