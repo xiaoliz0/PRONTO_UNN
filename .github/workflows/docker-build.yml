@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: ${{ secrets.DOCKER_HUB_USERNAME }}/dev  # 替换为你的Docker Hub仓库名
+  IMAGE_NAME: ${{ secrets.DOCKER_HUB_USERNAME }}/pronto_unn  # 替换为你的Docker Hub仓库名
 
 jobs:
   build-and-push:
@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.xiaoliz0/dev }}
+          images: xiaoliz0/pronto_unn
           tags: |
             type=ref,event=branch
             type=ref,event=pr
