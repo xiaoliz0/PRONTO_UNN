@@ -1,5 +1,5 @@
 FROM python:3.14.0a2-slim
-LABEL maintainer="Xiaoli.Zhang@rr-research.no"
+LABEL maintainer="xiaolz@ous-hf.no"
 # install dependencies
 COPY requirements.txt /
 RUN apt-get update \
@@ -15,7 +15,6 @@ RUN apt-get update \
     && pip install --no-cache-dir -r requirements.txt \
     && rm /requirements.txt
 # copy over config, template and script
-COPY Config /pronto/Config
-COPY In /pronto/In
-COPY Script /pronto/Script
-COPY pronto /pronto/Script/pronto
+COPY Config /pronto_unn/Config
+COPY In /pronto_unn/In
+COPY Script /pronto_unn/Script
